@@ -1,0 +1,60 @@
+/* Selector universal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Selector de tipo */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Selector de ID */
+#main-header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+/* Selector de clase */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.highlight {
+    color: #ff5733;
+}
+
+/* Selectores de descendiente e hijo */
+ul li {
+    list-style: none;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+ul > li:last-child {
+    border-bottom: none;
+}
+
+/* Selector de pseudo-clase */
+a:hover {
+    color: #ff5733;
+}
+
+/* Selectores de hermanos adyacentes y generales */
+label + input,
+h3 ~ p {
+    margin-top: 10px;
+    display: block;
+}
+
+/* Selector de pseudo-elemento */
+p::first-letter {
+    font-size: 2em;
+    color: #0040ff;
+}

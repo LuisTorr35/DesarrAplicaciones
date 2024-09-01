@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 20px;
+}
+
+/* Desplazamiento suave entre secciones */
+html {
+    scroll-behavior: smooth;
+}
+
+.main-header {
+    background-color: #2E8B57; /* Color más oscuro para mejor contraste */
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+    border-bottom: 4px solid #1C5D3A; /* Añadir un borde para darle más definición */
+}
+
+.main-header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 15px; /* Más separación entre el menú y el título */
+}
+
+.main-header nav ul li {
+    margin: 0 20px; /* Ampliar espacio entre los elementos del menú */
+}
+
+/* Transición suave para los enlaces del menú de navegación */
+.main-header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease; /* Suaviza el cambio de color */
+}
+
+/* Cambio de color al hacer hover sobre los enlaces del menú */
+.main-header nav ul li a:hover {
+    text-decoration: underline;
+    color: #FFD700; /* Cambio de color más notable en hover */
+}
+
+.intro {
+    text-align: center;
+    margin: 40px 0; /* Aumentar el margen para mayor separación */
+    padding: 0 10px;
+}
+
+.intro h2 {
+    font-size: 2.5em; /* Aumentar el tamaño de la fuente */
+    color: #2E8B57;
+    margin-bottom: 20px; /* Más espacio debajo del título */
+}
+
+.intro p {
+    font-size: 1.2em; /* Aumentar ligeramente el tamaño del texto */
+    color: #555; /* Color más suave para el texto */
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Animación para los elementos con la clase .grid-item */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Más flexible para varios tamaños de pantalla */
+    gap: 25px; /* Ampliar el espacio entre los elementos */
+    margin: 40px 0; /* Mayor margen superior e inferior */
+    padding: 0 10px;
+}
+
+.grid-item {
+    background: white;
+    padding: 25px; /* Ampliar el padding interno */
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Más suave y natural */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añadir efecto de transición */
+    position: relative;
+    overflow: hidden; /* Asegura que los elementos no se desborden */
+}
+
+/* Aumentar tamaño y sombra al pasar el mouse sobre los grid-item */
+.grid-item:hover {
+    transform: scale(1.05); /* Incrementa ligeramente el tamaño */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+    margin: 40px 0;
+    padding: 0 10px;
+    gap: 25px; /* Añadir espacio entre los elementos */
+}
+
+.flex-item {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    flex: 1 1 30%; /* Permitir que los elementos se adapten al tamaño del contenedor */
+    max-width: 300px; /* Limitar el ancho máximo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.flex-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+#impacto {
+    background-color: #2E8B57;
+    color: white;
+    padding: 60px 20px; /* Más padding para mayor impacto visual */
+    text-align: center;
+    border-radius: 8px;
+    line-height: 1.5;
+}
+
+#impacto p {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.2em;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 4px solid #1C5D3A; /* Añadir borde superior */
+    font-size: 1em;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Diseño de una sola columna */
+    }
+
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flex-item {
+        width: 90%;
+        max-width: 400px; /* Ajustar el ancho en pantallas más pequeñas */
+        margin-bottom: 20px;
+    }
+
+    .main-header nav ul {
+        flex-direction: column;
+    }
+
+    .main-header nav ul li {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro h2 {
+        font-size: 2em; /* Ajustar el tamaño del texto para móviles */
+    }
+
+    .intro p {
+        font-size: 1em;
+        padding: 0 15px;
+    }
+
+    .flex-item, .grid-item {
+        padding: 20px; /* Reducir el  espacio interior entre el contenido de un elemento y su borde en pantallas pequeñas */
+    }
+
+    #impacto {
+        padding: 30px;
+    }
+
+    footer {
+        padding: 15px;
+    }
+}
