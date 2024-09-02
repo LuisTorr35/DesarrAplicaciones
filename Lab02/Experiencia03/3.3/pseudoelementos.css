@@ -1,0 +1,32 @@
+h1::before {
+    content: "★ ";
+    color: gold;
+}
+h1::after {
+    content: " ★";
+    color: gold;
+}
+p::first-letter {
+    font-size: 2em;
+    color: red;
+    font-weight: bold;
+}
+p::first-line {
+    font-weight: bold;
+    color: navy;
+}
+::selection {
+    background-color: yellow;
+    color: black;
+}
+input::placeholder {
+    color: gray;
+    font-style: italic;
+}
+
+ul li::marker {
+    color: blue;
+    font-size: 1.5em;
+}
+
+

@@ -1,0 +1,55 @@
+/* Medidas en centímetros */
+.cm-box {
+    width: 5cm;
+    height: 2cm;
+    background-color: lightblue;
+    margin-bottom: 10px;
+}
+
+/* Medidas en milímetros */
+.mm-box {
+    width: 50mm;
+    height: 20mm;
+    background-color: lightgreen;
+    margin-bottom: 10px;
+}
+
+/* Medidas en cuartos de milímetro (Q) */
+.q-box {
+    width: 200Q;
+    height: 80Q;
+    background-color: lightcoral;
+    margin-bottom: 10px;
+}
+
+/* Medidas en pulgadas */
+.in-box {
+    width: 2in;
+    height: 1in;
+    background-color: lightgoldenrodyellow;
+    margin-bottom: 10px;
+}
+
+/* Medidas en picas */
+.pc-box {
+    width: 12pc;
+    height: 6pc;
+    background-color: lightpink;
+    margin-bottom: 10px;
+}
+
+/* Medidas en puntos */
+.pt-box {
+    width: 72pt;
+    height: 36pt;
+    background-color: lightseagreen;
+    margin-bottom: 10px;
+}
+
+/* Medidas en píxeles */
+.px-box {
+    width: 150px;
+    height: 75px;
+    background-color: lightskyblue;
+    margin-bottom: 10px;
+}

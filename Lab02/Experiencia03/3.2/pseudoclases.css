@@ -1,0 +1,42 @@
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+input:focus {
+    border-color: blue;
+    background-color: lightyellow;
+}
+p:first-child {
+    font-weight: bold;
+    color: red;
+}
+p:last-child {
+    font-style: italic;
+    color: purple;
+}
+li:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+li:nth-child(even) {
+    background-color: #d0d0d0;
+}
+button:not(.primary) {
+    background-color: gray;
+    color: white;
+}
+input[type="checkbox"]:checked {
+    outline: 2px solid green;
+}
+input:disabled {
+    background-color: #ccc;
+    color: #666;
+}
+div:empty {
+    border: 2px dashed red;
+    height: 50px;
+    width: 50px;
+}
+p:first-of-type {
+    font-size: 1.2em;
+    color: darkblue;
+}

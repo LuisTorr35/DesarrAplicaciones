@@ -1,0 +1,47 @@
+/* Medida relativa en em */
+.em-box {
+    width: 20em;
+    height: 10em;
+    background-color: lightcoral;
+    margin-bottom: 10px;
+}
+
+/* Medida relativa en ex */
+.ex-box {
+    width: 30ex;
+    height: 15ex;
+    background-color: lightblue;
+    margin-bottom: 10px;
+}
+
+/* Medida relativa en ch */
+.ch-box {
+    width: 50ch;
+    height: 25ch;
+    background-color: lightgreen;
+    margin-bottom: 10px;
+}
+
+/* Medida relativa en rem */
+.rem-box {
+    width: 10rem;
+    height: 5rem;
+    background-color: lightgoldenrodyellow;
+    margin-bottom: 10px;
+}
+
+/* Medida relativa en lh */
+.lh-box {
+    width: 20lh;
+    height: 10lh;
+    background-color: lightpink;
+    margin-bottom: 10px;
+}
+
+/* Medida relativa en vw */
+.vw-box {
+    width: 50vw;
+    height: 25vw;
+    background-color: lightskyblue;
+    margin-bottom: 10px;
+}

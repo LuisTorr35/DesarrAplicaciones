@@ -1,0 +1,21 @@
+/* Colores configurados con opacidad */
+.opacity-rojo {
+    background-color: rgba(255, 0, 0, 0.5); /* Rojo con 50% de opacidad */
+    color: white;
+    padding: 20px;
+    margin: 10px;
+}
+
+.opacity-verde {
+    background-color: rgba(0, 255, 0, 0.3); /* Verde con 30% de opacidad */
+    color: white;
+    padding: 20px;
+    margin: 10px;
+}
+
+.opacity-azul {
+    background-color: rgba(0, 0, 255, 0.7); /* Azul con 70% de opacidad */
+    color: white;
+    padding: 20px;
+    margin: 10px;
+}

@@ -1,0 +1,8 @@
+body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background-color: #4CAF50; color: white; text-align: center; padding: 1em; }
+        nav { background-color: #333; color: white; padding: 1em; text-align: center; }
+        nav a { color: white; margin: 0 10px; text-decoration: none; }
+        main { padding: 20px; }
+        article { margin-bottom: 20px; }
+        footer { background-color: #333; color: white; text-align: center; padding: 1em; position: absolute; bottom: 0; width: 100%; }
+        .highlight { color: #ff0000; font-weight: bold; }

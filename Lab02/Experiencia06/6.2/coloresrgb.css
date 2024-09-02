@@ -1,0 +1,21 @@
+/* Colores configurados por RGB */
+.rgb-enteros {
+    background-color: rgb(255, 0, 0); /* Rojo */
+    color: white;
+    padding: 20px;
+    margin: 10px;
+}
+
+.rgb-porcentajes {
+    background-color: rgb(0%, 50%, 100%); /* Azul claro */
+    color: white;
+    padding: 20px;
+    margin: 10px;
+}
+
+.rgb-mixto {
+    background-color: rgb(50%, 100, 50); /* Verde medio */
+    color: white;
+    padding: 20px;
+    margin: 10px;
+}

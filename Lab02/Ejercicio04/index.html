@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página Web Accesible</title>
+    <style>
+        /* Desplazamiento suave entre secciones */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif; /* Fuente simple y legible */
+            font-size: 16px; /* Asegurar un tamaño de texto adecuado */
+            line-height: 1.5; /* Mejorar la legibilidad */
+            color: #333; /* Color de texto oscuro para buen contraste */ /* Mejora de accesibilidad */
+            background-color: #f9f9f9; /* Fondo claro para buen contraste */ /* Mejora de accesibilidad */
+        }
+
+        /* Mejora del contraste de enlaces */
+        a {
+            color: #0056b3; /* Un azul con buen contraste sobre blanco */ /* Mejora de accesibilidad */
+        }
+
+        a:hover {
+            color: #004080; /* Un tono más oscuro al pasar el ratón */ /* Mejora de accesibilidad */
+        }
+
+        /* Estilos de los elementos de la cuadrícula */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .grid-item {
+            background: white;
+            padding: 25px; /* Ampliar el padding interno */
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Más suave y natural */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añadir efecto de transición */
+            position: relative;
+            overflow: hidden; /* Asegura que los elementos no se desborden */
+        }
+
+        /* Aumentar tamaño y sombra al pasar el mouse sobre los grid-item */
+        .grid-item:hover {
+            transform: scale(1.05); /* Incrementa ligeramente el tamaño */
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+            background-color: #e8f0fe; /* Color de fondo más claro al hacer hover */ /* Mejora de accesibilidad */
+        }
+
+        /* Estilos de los elementos flexibles */
+        .flex-container {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .flex-item {
+            background: white;
+            padding: 25px; /* Ampliar el padding interno */
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Más suave y natural */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añadir efecto de transición */
+            position: relative;
+            overflow: hidden; /* Asegura que los elementos no se desborden */
+        }
+
+        /* Aumentar tamaño y sombra al pasar el mouse sobre los flex-item */
+        .flex-item:hover {
+            transform: scale(1.05); /* Incrementa ligeramente el tamaño */
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+            background-color: #e8f0fe; /* Color de fondo más claro al hacer hover */ /* Mejora de accesibilidad */
+        }
+
+        /* Encabezados bien estructurados para la accesibilidad */
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenidos a Mi Página</h1>
+        <nav>
+            <ul>
+                <li><a href="#seccion1">Sección 1</a></li>
+                <li><a href="#seccion2">Sección 2</a></li>
+                <li><a href="#seccion3">Sección 3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="seccion1">
+            <h2>Sección 1</h2>
+            <div class="grid-container">
+                <div class="grid-item">Contenido 1</div>
+                <div class="grid-item">Contenido 2</div>
+                <div class="grid-item">Contenido 3</div>
+            </div>
+        </section>
+
+        <section id="seccion2">
+            <h2>Sección 2</h2>
+            <div class="flex-container">
+                <div class="flex-item">Contenido A</div>
+                <div class="flex-item">Contenido B</div>
+                <div class="flex-item">Contenido C</div>
+            </div>
+        </section>
+
+        <section id="seccion3">
+            <h2>Sección 3</h2>
+            <p>Contenido de la sección 3...</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mi Página Web Accesible</p>
+    </footer>
+</body>
+</html>

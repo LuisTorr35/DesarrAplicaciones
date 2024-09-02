@@ -1,0 +1,21 @@
+/* Colores configurados por nombre */
+.nombre-red {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+}
+
+.nombre-blue {
+    background-color: blue;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+}
+
+.nombre-green {
+    background-color: green;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+}

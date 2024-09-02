@@ -1,0 +1,29 @@
+a[href^="https"] {
+    color: green;
+    font-weight: bold;
+}
+img[src$=".png"] {
+    border: 2px solid red;
+}
+input[type*="text"] {
+    background-color: lightyellow;
+    border: 1px solid gray;
+}
+button[type="submit"] {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+}
+input[type~="email"] {
+    border: 1px solid green;
+}
+
+a[lang|="en"] {
+    color: blue;
+    font-style: italic;
+}
+input[disabled] {
+    background-color: lightgray;
+    cursor: not-allowed;
+}

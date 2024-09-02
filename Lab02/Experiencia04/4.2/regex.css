@@ -1,0 +1,20 @@
+/* Selectores regex */
+[class^="intro"] {
+    background-color: lightblue;
+}
+
+[class$="final"] {
+    color: red;
+}
+
+[class*="mid"] {
+    font-weight: bold;
+}
+
+a[href^="#"] {
+    background-color: gold;
+}
+
+a[href$=".org"] {
+    color: red;
+}
