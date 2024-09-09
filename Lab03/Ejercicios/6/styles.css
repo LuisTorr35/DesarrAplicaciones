@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.item {
+    background-color: #bc3838;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.item-1 {
+    background-color: white;
+    color: black;
+    grid-column: span 1;
+    grid-row: span 2;
+    height: 250px;
+}
+
+.item-2 {
+    background-color: black;
+    color: white;
+    grid-column: span 1;
+    grid-row: span 2;
+    height: 250px;
+}
+
+.item-3 {
+    background-color: gray;
+    color: black;
+    grid-column: span 1;
+    grid-row: span 1;
+    height: 120px;
+}
+
+.item-4 {
+    background-color: orangered;
+    color: white;
+    grid-column: span 1;
+    grid-row: span 1;
+    height: 120px;
+}
+
+.item-5 {
+    background-color: #dfac3e;
+    grid-column: span 1;
+    grid-row: span 1;
+    height: 120px;
+}
+
+.item-6 {
+    background-color: rgb(144, 116, 186);
+    grid-column: span 1;
+    grid-row: span 2;
+    height: 250px;
+}
+
+.item-7 {
+    background-color: gray;
+    grid-column: span 1;
+    grid-row: span 1;
+    height: 120px;
+}
+
+.item-8 {
+    background-color: rgb(147, 183, 183);
+    grid-column: span 1;
+    grid-row: span 1;
+    height: 120px;
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
