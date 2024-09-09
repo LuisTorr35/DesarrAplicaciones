@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GridAutoFlow</title>
+    <style>
+        .item3 { grid-column: auto / span 2; }/*span 2, significa q ocupa 2 columnas*/
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto; /*3 columnas*/
+            grid-template-rows: auto auto; /*2 filas*/
+            grid-gap: 10px;
+            background-color: #2196F3;
+            padding: 10px;
+        }
+        
+        .grid-container > div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 20px 0;
+            font-size: 30px;
+        }
+    </style>
+        
+</head>
+<body>
+    <h1>The grid-auto-flow Property</h1>
+
+    <p>The <em>grid-auto-flow</em> property controls how auto-placed items are inserted in the grid.</p>
+    <p>This grid has three columns and two rows.</p>
+
+    <p>"item3" spans two columns, where will the other items be inserted?.</p>
+    <h2>grid-auto-flow: row</h2>
+    <div class="grid-container" style="grid-auto-flow: row;"> <!--fila normal-->
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+    </div>
+    <h2>grid-auto-flow: row dense</h2>
+    <p>The "dense" value fills holes in the grid:</p>
+        <div class="grid-container" style="grid-auto-flow: row dense;"><!--densidad afecta, se van pa abajo las filas-->
+            <!--el valor dense intenta rellenar cualquier hueco que pueda surgir en la cuadrícula moviendo elementos hacia adelante para ocupar espacios vacíos.-->
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4A148C;
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .menu a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.products, .Informacion {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.DUEÑO, .Empleado, .product {
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product img {
+    width: 100px;
+    height: 100px;
+}
+
+.product h2 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 16px;
+}
+
+button {
+    background-color: #00BFA5;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00897B;
+}
+
+#about, #contact {
+    display: none; /* Ocultar las secciones 'About' y 'Contact' inicialmente */
+}
+
+#about:target, #contact:target {
+    display: block; /* Mostrar la sección cuando está seleccionada */
+}
+
+/* Breakpoint para 900px */
+@media (max-width: 900px) {
+    .product {
+        width: 45%;
+    }
+}
+
+/* Breakpoint para 480px */
+@media (max-width: 480px) {
+    .navbar .menu {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    .menu-icon.active + .menu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu a {
+        margin: 10px 0;
+        text-align: center;
+    }
+}

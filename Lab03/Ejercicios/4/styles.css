@@ -1,0 +1,63 @@
+/* Contenedor principal de la cuadrícula */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+    width: 80vw;
+    height: 60vh;
+    margin: 0 auto;
+    background-color: #2C3E50;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Estilo general para los ítems */
+.item {
+    border: 2px solid #ecf0f1;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Estilos específicos para cada ítem */
+.item1 {
+    grid-column: 1 / 7;
+    grid-row: 1 / 4;
+    background-color: #E74C3C;
+}
+
+.item2 {
+    grid-column: 7 / 13;
+    grid-row: 1 / 2;
+    background-color: #3498DB;
+}
+
+.item3 {
+    grid-column: 7 / 13;
+    grid-row: 2 / 4;
+    background-color: #1ABC9C;
+}
+
+.item4 {
+    grid-column: 1 / 7;
+    grid-row: 4 / 6;
+    background-color: #9B59B6;
+}
+
+.item5 {
+    grid-column: 7 / 10;
+    grid-row: 4 / 6;
+    background-color: #34495E;
+}
+
+.item6 {
+    grid-column: 10 / 13;
+    grid-row: 4 / 6;
+    background-color: #F39C12;
+}
