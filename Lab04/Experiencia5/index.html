@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 05: Uso de Arrays</title>
+</head>
+<body>
+    <h1>Práctica 05: Uso de Arrays en JavaScript</h1>
+    
+    <h2>Creación, Manipulación y Uso de Iteradores</h2>
+    <div id="output"></div>
+    
+    <script>
+        // a) CREACIÓN DE ARRAYS
+        let arrayNumerico = [10, 20, 30, 40, 50];
+        let arrayStrings = new Array('Manzana', 'Pera', 'Plátano', 'Uva');
+        let arrayObjetos = Object.create(Array.prototype);
+        arrayObjetos.push({ nombre: 'Juan', edad: 25 });
+        arrayObjetos.push({ nombre: 'María', edad: 30 });
+        function agregarDatosArrayNumerico(valor) {
+            arrayNumerico.push(valor);
+        }
+        
+        function agregarDatosArrayStrings(valor) {
+            arrayStrings.push(valor);
+        }
+        
+        function agregarDatosArrayObjetos(nombre, edad) {
+            arrayObjetos.push({ nombre: nombre, edad: edad });
+        }
+        
+        agregarDatosArrayNumerico(60);
+        agregarDatosArrayStrings('Naranja');
+        agregarDatosArrayObjetos('Carlos', 40);
+        
+        
+        
+        arrayNumerico.pop(); 
+        arrayNumerico.shift(); 
+        arrayNumerico.push(70); 
+        
+        
+        arrayStrings.splice(1, 1); 
+        arrayStrings.unshift('Fresa'); 
+        arrayObjetos[0].edad = 26; 
+        arrayObjetos.pop(); 
+        
+        arrayNumerico.forEach(function(valor, index) {
+            console.log(`Índice ${index}: Valor ${valor}`);
+        });
+        let arrayStringsMayusculas = arrayStrings.map(function(str) {
+            return str.toUpperCase();
+        });
+        
+        
+        let arrayFiltrado = arrayObjetos.filter(function(obj) {
+            return obj.edad > 25;
+        });
+        document.getElementById('output').innerHTML = `
+            <h3>Resultados</h3>
+            <p><strong>Array Numérico:</strong> ${arrayNumerico}</p>
+            <p><strong>Array de Strings:</strong> ${arrayStrings}</p>
+            <p><strong>Array de Strings (Mayúsculas):</strong> ${arrayStringsMayusculas}</p>
+            <p><strong>Array de Objetos:</strong> ${JSON.stringify(arrayObjetos)}</p>
+            <p><strong>Array Filtrado (edad > 25):</strong> ${JSON.stringify(arrayFiltrado)}</p>
+        `;
+        
+        console.log("Array Numérico:", arrayNumerico);
+        console.log("Array de Strings:", arrayStrings);
+        console.log("Array de Strings (Mayúsculas):", arrayStringsMayusculas);
+        console.log("Array de Objetos:", arrayObjetos);
+        console.log("Array Filtrado:", arrayFiltrado);
+        
+    </script>
+</body>
+</html></html>

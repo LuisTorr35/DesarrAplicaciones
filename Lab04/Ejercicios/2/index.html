@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Conversor de Temperatura</h1>
+        <label for="tempInput">Ingresa la temperatura:</label>
+        <input type="number" id="tempInput" placeholder="Temperatura">
+        <select id="scaleSelect">
+            <option value="C">Celsius</option>
+            <option value="F">Fahrenheit</option>
+        </select>
+        <button id="convertButton">Convertir</button>
+        
+        <p id="result"></p>
+    </div>
+    
+    <script>
+        function celsiusToFahrenheit(celsius) {
+            return (celsius * 9/5) + 32;
+        }
+        
+        function fahrenheitToCelsius(fahrenheit) {
+            return (fahrenheit - 32) * 5/9;
+        }
+        
+        document.getElementById('convertButton').addEventListener('click', function() {
+            const tempInput = parseFloat(document.getElementById('tempInput').value);
+            const scale = document.getElementById('scaleSelect').value;
+            let result = '';
+            
+            if (isNaN(tempInput)) {
+                result = 'Por favor, ingresa una temperatura válida.';
+            } else {
+                if (scale === 'C') {
+                    const fahrenheit = celsiusToFahrenheit(tempInput);
+                    result = `${tempInput} °C es igual a ${fahrenheit.toFixed(2)} °F.`;
+                } else if (scale === 'F') {
+                    const celsius = fahrenheitToCelsius(tempInput);
+                    result = `${tempInput} °F es igual a ${celsius.toFixed(2)} °C.`;
+                }
+            }
+            
+            document.getElementById('result').innerText = result;
+        });
+    </script>
+</body>
+</html>

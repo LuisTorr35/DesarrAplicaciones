@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiencia 3 a</title>
+</head>
+<body>
+    <script>
+        // 1. Declaración de una función 
+        const foo = () => {
+            console.log("foobar");
+        }
+        
+        // 2. Invocación de la función 
+        foo();  // Resultado esperado: "foobar"
+        
+        function sayHello() {
+            return "Hello, ";
+        }
+        function greeting(helloMessage, name) {
+            console.log(helloMessage() + name);
+        }
+        // Pass sayHello as an argument to greeting function
+        greeting(sayHello, "JavaScript!");
+        // Hello, JavaScript!
+        
+        function sayHello() {
+            return ()=>{
+                console.log("Hello!");
+            }
+        }
+        //() => { console.log("Hello!");}, JavaScript!
+        
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elevación de Variables</title>
+</head>
+<body>
+    <h1>Demostración de Elevación de Variables</h1>
+    
+    <script>
+        // 1. Verificar la elevación de la variable x
+        console.log(x === undefined);  // true
+        var x = 3;
+        
+        // 2. Definir una variable global
+        var myvar = 'my value';
+        
+        // 3. Función que demuestra elevación dentro del ámbito de función
+        (function() {
+            console.log(myvar);  // undefined 
+            var myvar = 'valor local';  // La variable local se eleva
+            console.log(myvar);  // 'valor local'
+        })();
+    </script>
+</body>
+</html>

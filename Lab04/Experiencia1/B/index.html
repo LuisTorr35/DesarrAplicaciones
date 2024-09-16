@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Dinámica con JavaScript en </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header, nav, section, footer {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        nav a {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mi Página Dinámica</h1>
+        <nav>
+            <a href="#" id="btn-inicio">Inicio</a>
+            <a href="#" id="btn-info">Información</a>
+            <a href="#" id="btn-contacto">Contacto</a>
+        </nav>
+    </header>
+    
+    <section id="content">
+        <h2>Bienvenido a la página</h2>
+        <p>Haz clic en las opciones de navegación para cargar contenido dinámico.</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Mi Página Web Dinámica</p>
+    </footer>
+    
+    <!-- El código JavaScript está dentro de las etiquetas script -->
+    <script>
+        // dinamismo javascript
+        document.addEventListener("DOMContentLoaded", function() {
+            // Seleccionar elementos
+            const content = document.getElementById("content");
+            const btnInicio = document.getElementById("btn-inicio");
+            const btnInfo = document.getElementById("btn-info");
+            const btnContacto = document.getElementById("btn-contacto");
+            // Función para cargar contenido dinámico
+            function loadContent(title, text) {
+                content.innerHTML = `
+            <h2>${title}</h2>
+            <p>${text}</p>
+        `;
+            }
+            
+            // Eventos de clic para cada botón de navegación
+            btnInicio.addEventListener("click", function(event) {
+                event.preventDefault();
+                loadContent("Inicio", "Bienvenido a la página principal.");
+            });
+            
+            btnInfo.addEventListener("click", function(event) {
+                event.preventDefault();
+                loadContent("Información", "Esta es la sección de información.");
+            });
+            
+            btnContacto.addEventListener("click", function(event) {
+                event.preventDefault();
+                loadContent("Contacto", "Aquí puedes encontrar la información de contacto.");
+            });
+        });
+    </script>
+</body>
+</html>

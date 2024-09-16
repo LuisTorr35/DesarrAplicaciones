@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiencia 3 c</title>
+</head>
+<body>
+    <script>
+        function exampleFunction() {
+        const x = "declared inside function"; // x solo puede ser usada dentro de exampleFunction
+        console.log("Inside function");
+        console.log(x);
+        }
+        console.log(x); // Causa un error
+        
+        const x = "declared outside function";
+        
+        exampleFunction();
+        
+        function exampleFunction() {
+            console.log("Inside function");
+            console.log(x); // x puede ser usada dentro de la función
+        }
+        
+        console.log("Outside function");
+        console.log(x); // x también puede ser usada fuera de la función
+        
+    </script>
+</body>
+</html>

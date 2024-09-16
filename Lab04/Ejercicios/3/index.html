@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de contraseñas seguras</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Generador de Contraseñas Segura</h2>
+    
+        <!-- Entrada para ingresar la longitud de la contraseña -->
+        <label for="longitud">Longitud de la contraseña:</label>
+        <input type="number" id="longitud" placeholder="Introduce la longitud de la contraseña" min="1">
+    
+        <!-- Botón para generar la contraseña -->
+        <button onclick="generarContraseña()">Generar Contraseña</button>
+    
+        <!-- Área de texto donde se mostrará la contraseña generada -->
+        <label for="contraseña">Contraseña generada:</label>
+        <textarea id="contraseña" rows="3" readonly></textarea>
+    
+        <!-- Botón para copiar la contraseña -->
+        <button onclick="copiarContraseña()">Copiar Contraseña</button>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

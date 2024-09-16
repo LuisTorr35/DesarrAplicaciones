@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de Variables y Constantes</title>
+</head>
+<body>
+    <h1>Prueba de Ámbito de Variables y Constantes</h1>
+    
+    <button onclick="prueba()">Haz clic para ejecutar el bloque de código</button>
+    
+    <script>
+        function prueba() {
+            // 2. Declarar una variable con ámbito de bloque
+            if (true) {
+                let variableBloque = "Esta es una variable de bloque";
+                
+                // 3. Declarar una constante en el mismo bloque
+                const constanteBloque = "Esta es una constante de bloque";
+                
+                // Mostrar el valor de la variable y la constante dentro del bloque
+                console.log("Dentro del bloque:");
+                console.log(variableBloque);  // Salida: Esta es una variable de bloque
+                console.log(constanteBloque);  // Salida: Esta es una constante de bloque
+            }
+            
+            // 4. Demostrar el ámbito de bloque
+            console.log("Fuera del bloque:");
+            
+            // Intentar acceder a la variable y la constante fuera del bloque
+            try {
+                console.log(variableBloque);  // Error: variableBloque is not defined
+            } catch (error) {
+                console.error("Error: La variable 'variableBloque' no está accesible fuera del bloque.");
+            }
+            
+            try {
+                console.log(constanteBloque);  // Error: constanteBloque is not defined
+            } catch (error) {
+                console.error("Error: La constante 'constanteBloque' no está accesible fuera del bloque.");
+            }
+        }
+    </script>
+</body>
+</html>

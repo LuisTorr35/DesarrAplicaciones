@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de console.log() y Scope</title>
+</head>
+<body>
+    <h1>Demostración de Scope y console.log()</h1>
+    
+    <script>
+        
+        console.log(miVariable);  // undefined
+        var miVariable;
+        console.log(miVariable);  // undefined (aún no se le ha asignado valor)
+        miVariable = 10;
+        console.log(miVariable);  // 10 (después de asignar un valor)
+        
+        // 2. Crear funciones anidadas y verificar el scope
+        function funcionPadre() {
+            var variablePadre = "Variable en el ámbito de la función padre";
+            
+            console.log(variablePadre);  // 'Variable en el ámbito de la función padre'
+            
+            function funcionHija() {
+                var variableHija = "Variable en el ámbito de la función hija";
+                console.log(variableHija);  // 'Variable en el ámbito de la función hija'
+                console.log(variablePadre);  // 'Variable en el ámbito de la función padre' (acceso a la variable padre)
+            }
+            
+            funcionHija();
+            
+            // Verificar si la variable de la función hija está accesible aquí
+            try {
+                console.log(variableHija);  // Error: variableHija is not defined (fuera del scope de la hija)
+            } catch (error) {
+                console.error("Error: variableHija no está accesible en el ámbito de la función padre.");
+            }
+        }
+        
+        funcionPadre();
+    </script>
+</body>
+</html>

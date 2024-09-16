@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Datos en JavaScript</title>
+</head>
+<body>
+    <h1>Ejemplos de Tipos de Datos y Conversiones en JavaScript</h1>
+    <button onclick="cambiarTipoDeDato()">Cambiar Tipo de Dato</button>
+    <button onclick="usarParseInt()">Usar parseInt()</button>
+    <button onclick="usarToString()">Usar toString()</button>
+    
+    <script>
+        // 1. Cambiar el tipo de dato de una variable
+        function cambiarTipoDeDato() {
+            var answer = 42;  // Inicialmente un número
+            alert("El valor de 'answer' es: " + answer + " (Tipo: " + typeof answer + ")");
+            answer = 'Gracias por todo el pescado...';  // Ahora una cadena
+            alert("El nuevo valor de 'answer' es: " + answer + " (Tipo: " + typeof answer + ")");
+        }
+        
+        // 2. Usar parseInt() para convertir cadenas a números
+        function usarParseInt() {
+            alert("parseInt('F', 16) = " + parseInt("F", 16));  // Hexadecimal
+            alert("parseInt('17', 8) = " + parseInt("17", 8));   // Octal
+            alert("parseInt('15', 10) = " + parseInt("15", 10)); // Decimal
+            alert("parseInt('1111', 2) = " + parseInt("1111", 2)); // Binario
+            alert("parseInt('Hello', 8) = " + parseInt("Hello", 8)); // No válido
+        }
+        
+        // 3. Usar toString() para convertir números a cadenas
+        function usarToString() {
+            var howMany = 10;
+            alert("howMany.toString() = " + howMany.toString());  // "10"
+            alert("45 .toString() = " + (45).toString());         // "45"
+            var x = 7;
+            alert("x.toString(2) (binario) = " + x.toString(2));  // "111"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 04: Uso de Objetos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Práctica 04: Uso de Objetos en JavaScript</h1>
+    
+    <h2>Creación y Manipulación de Objetos</h2>
+    <div id="output"></div>
+    
+    <script>
+        let persona1 = {
+            nombre: 'Juan',
+            edad: 30
+        };
+        function Persona(nombre, edad) {
+            this.nombre = nombre;
+            this.edad = edad;
+        }
+        
+        let persona2 = new Persona('Maria', 25);
+        let personaPrototype = {
+            saludar: function() {
+                return `Hola, mi nombre es ${this.nombre}`;
+            }
+        };
+        
+        let persona3 = Object.create(personaPrototype);
+        persona3.nombre = 'Carlos';
+        persona3.edad = 40;
+        persona1.ocupacion = 'Ingeniero';
+        Persona.prototype.ocupacion = 'Desconocida';
+        persona2.ocupacion = 'Doctora';
+        persona3.ocupacion = 'Profesor';
+        
+        document.getElementById('output').innerHTML = `
+            <h3>Resultados</h3>
+            <p><strong>Persona 1 (Iniciador de objetos):</strong> ${JSON.stringify(persona1)}</p>
+            <p><strong>Persona 2 (Constructor):</strong> ${JSON.stringify(persona2)}</p>
+            <p><strong>Persona 3 (Object.create()):</strong> ${JSON.stringify(persona3)}</p>
+            <p><strong>Persona 3 saluda:</strong> ${persona3.saludar()}</p>
+        `;
+        console.log("Persona 1:", persona1);
+        console.log("Persona 2:", persona2);
+        console.log("Persona 3:", persona3);
+    </script>
+</body>
+</html>

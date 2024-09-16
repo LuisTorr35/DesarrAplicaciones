@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de Objetos Window, Array y Number</title>
+</head>
+<body>
+    <h1>Práctica: Uso de Objetos Window, Array y Number</h1>
+    
+    <div id="outputWindow"></div>
+    <div id="outputArray"></div>
+    <div id="outputNumber"></div>
+    <script>
+        function mostrarPropiedadesWindow() {
+            let propiedadesWindow = `
+                <h2>Propiedades del Objeto Window:</h2>
+                <p><strong>Altura interna (innerHeight):</strong> ${window.innerHeight}px</p>
+                <p><strong>Ancho interno (innerWidth):</strong> ${window.innerWidth}px</p>
+                <p><strong>URL actual:</strong> ${window.location.href}</p>
+            `;
+            
+            propiedadesWindow += `
+                <h3>Uso de métodos del objeto Window:</h3>
+                <p><strong>Confirmación:</strong> ${window.confirm('¿Te gusta usar el objeto Window?')}</p>
+                <p><strong>Navegador en línea:</strong> ${window.navigator.onLine ? 'Sí' : 'No'}</p>
+            `;
+            
+            document.getElementById('outputWindow').innerHTML = propiedadesWindow;
+        }
+        mostrarPropiedadesWindow();
+        function mostrarPropiedadesArray() {
+            let ejemploArray = [10, 20, 30, 40, 50];
+            
+            let propiedadesArray = `
+                <h2>Propiedades del Objeto Array:</h2>
+                <p><strong>Longitud del array:</strong> ${ejemploArray.length}</p>
+            `;
+            
+            ejemploArray.push(60);  
+            ejemploArray.pop();     
+            let arrayInvertido = ejemploArray.reverse();  
+            
+            propiedadesArray += `
+                <h3>Uso de métodos del objeto Array:</h3>
+                <p><strong>Array original:</strong> [10, 20, 30, 40, 50]</p>
+                <p><strong>Array invertido:</strong> ${arrayInvertido}</p>
+                <p><strong>Array después de push/pop:</strong> ${ejemploArray}</p>
+            `;
+            
+            document.getElementById('outputArray').innerHTML = propiedadesArray;
+        }
+        
+        
+        mostrarPropiedadesArray();
+        
+        function mostrarPropiedadesNumber() {
+            let numeroEjemplo = 12345.6789;
+            
+            let propiedadesNumber = `
+                <h2>Propiedades del Objeto Number:</h2>
+                <p><strong>Valor del número:</strong> ${numeroEjemplo}</p>
+            `;
+            let numeroFijo = numeroEjemplo.toFixed(2);  
+            let numeroExponencial = numeroEjemplo.toExponential(3);  
+            
+            propiedadesNumber += `
+                <h3>Uso de métodos del objeto Number:</h3>
+                <p><strong>Redondeado a 2 decimales:</strong> ${numeroFijo}</p>
+                <p><strong>Notación exponencial:</strong> ${numeroExponencial}</p>
+                <p><strong>Es NaN (isNaN):</strong> ${isNaN(numeroEjemplo)}</p>
+            `;
+            
+            document.getElementById('outputNumber').innerHTML = propiedadesNumber;
+        }
+        mostrarPropiedadesNumber();
+        
+    </script>
+</body>
+</html>
