@@ -1,0 +1,16 @@
+@import 'mixins';
+.navbar {
+    background-color: $color-secundario !important; 
+    
+    .navbar-brand {
+        font-weight: bold;
+    }
+    
+    .nav-link {
+        @include transicion-suave(color);
+        
+        &:hover {
+            color: $color-primario;
+        }
+    }
+}

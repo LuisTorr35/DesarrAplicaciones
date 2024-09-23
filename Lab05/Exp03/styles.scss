@@ -1,0 +1,63 @@
+$primary-color: #3498db;
+$hover-color: darken($primary-color, 10%);
+$font-family: 'Arial, sans-serif';
+
+@mixin transition($property, $duration) {
+    transition: $property $duration ease-in-out;
+}
+
+body {
+    font-family: $font-family;
+    background-color: #f9f9f9;
+}
+
+.navbar {
+    background-color: $primary-color;
+    
+    .nav-link {
+        color: white;
+        @include transition(color, 0.3s);
+        
+        &:hover {
+            color: $hover-color;
+        }
+    }
+    
+    .navbar-brand {
+        color: white;
+        font-weight: bold;
+        font-size: 1.5rem;
+        @include transition(color, 0.3s);
+        
+        &:hover {
+            color: $hover-color;
+        }
+    }
+    
+    .dropdown-menu {
+        background-color: $primary-color;
+        
+        .dropdown-item {
+            color: white;
+            @include transition(background-color, 0.3s);
+            
+            &:hover {
+                background-color: $hover-color;
+            }
+        }
+    }
+}
+
+.dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    @include transition(all, 0.3s);
+    
+    &.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+

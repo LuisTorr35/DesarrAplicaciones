@@ -1,0 +1,94 @@
+// styles.scss
+@import 'variables';
+@import 'mixins';
+@import 'funciones';
+
+body {
+    font-family: $font-family;
+    font-size: $font-size-base;
+    background-color: $color-background;
+    color: $color-text;
+    margin: 0;
+}
+
+.header {
+    background-color: $color-primary;
+    padding: $spacing-base * 2;
+    text-align: center;
+
+    &__title {
+        color: white;
+        margin: 0;
+    }
+
+    &__nav {
+        ul {
+            list-style: none;
+            padding: 0;
+
+            li {
+                display: inline;
+                margin-right: $spacing-base;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.main-content {
+    padding: $spacing-base * 2;
+
+    .card {
+        background-color: white;
+        padding: $spacing-base * 2;
+        margin-bottom: $spacing-base * 2;
+        @include box-shadow();
+        @include border-radius();
+
+        h2 {
+            color: $color-primary;
+        }
+
+        form {
+            div {
+                margin-bottom: $spacing-base;
+
+                label {
+                    display: block;
+                    margin-bottom: $spacing-base / 2;
+                }
+
+                input {
+                    width: 100%;
+                    padding: $spacing-base;
+                    border: 1px solid $color-text;
+                    @include border-radius();
+                    @include transition(border-color);
+
+                    &:focus {
+                        border-color: $color-secondary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: $color-secondary;
+    color: white;
+    text-align: center;
+    padding: $spacing-base;
+
+    p {
+        margin: 0;
+    }
+}

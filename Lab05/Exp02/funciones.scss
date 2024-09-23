@@ -1,0 +1,4 @@
+// funciones.scss
+@function px-a-em($px) {
+    @return $px / $tamaño-base * 1em;
+}

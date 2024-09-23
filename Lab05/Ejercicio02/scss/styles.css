@@ -1,0 +1,73 @@
+body {
+  font-family: "Helvetica, Arial, sans-serif";
+  font-size: 16px;
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  margin: 0;
+}
+
+.header {
+  background-color: #3498db;
+  padding: 16px;
+  text-align: center;
+}
+.header__title {
+  color: white;
+  margin: 0;
+}
+.header__nav ul {
+  list-style: none;
+  padding: 0;
+}
+.header__nav ul li {
+  display: inline;
+  margin-right: 8px;
+}
+.header__nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+.header__nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.main-content {
+  padding: 16px;
+}
+.main-content .card {
+  background-color: white;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+.main-content .card h2 {
+  color: #3498db;
+}
+.main-content .card form div {
+  margin-bottom: 8px;
+}
+.main-content .card form div label {
+  display: block;
+  margin-bottom: 4px;
+}
+.main-content .card form div input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #2c3e50;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+.main-content .card form div input:focus {
+  border-color: #2ecc71;
+}
+
+.footer {
+  background-color: #2ecc71;
+  color: white;
+  text-align: center;
+  padding: 8px;
+}
+.footer p {
+  margin: 0;
+}/*# sourceMappingURL=styles.css.map */

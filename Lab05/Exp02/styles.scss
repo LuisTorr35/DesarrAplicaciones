@@ -1,0 +1,43 @@
+// styles.scss
+@import 'variables';
+@import 'mixins';
+@import 'funciones';
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: $color-verde;
+    margin: 0;
+
+    .content {
+        flex: 1;
+
+        table {
+            width: 100%;
+            th {
+                background-color: $color-fondo-footer;
+                @include centrar-texto(black);
+            }
+            td {
+                p {
+                    margin: 0; // Eliminar márgenes en párrafos dentro de celdas
+                }
+            }
+        }
+
+        form {
+            .mb-3 {
+                label {
+                    font-family: $fuente-principal;
+                }
+            }
+        }
+    }
+
+    
+    footer {
+        background-color: $color-fondo-footer;
+        @include centrar-texto(black);
+    }
+}

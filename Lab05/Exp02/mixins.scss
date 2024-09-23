@@ -1,0 +1,6 @@
+// mixins.scss
+@mixin centrar-texto($color) {
+    text-align: center;
+    color: $color;
+    padding: 10px;
+}

@@ -1,0 +1,31 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #d5f3e5;
+  margin: 0;
+}
+body .content {
+  flex: 1;
+}
+body .content table {
+  width: 100%;
+}
+body .content table th {
+  background-color: #f8f9fa;
+  text-align: center;
+  color: black;
+  padding: 10px;
+}
+body .content table td p {
+  margin: 0;
+}
+body .content form .mb-3 label {
+  font-family: "Arial, sans-serif";
+}
+body footer {
+  background-color: #f8f9fa;
+  text-align: center;
+  color: black;
+  padding: 10px;
+}/*# sourceMappingURL=styles.css.map */
