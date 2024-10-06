@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Importamos Link de React Router
 
 const BarritaNav = () => {
     useEffect(() => {
@@ -24,13 +25,13 @@ const BarritaNav = () => {
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                     <li className="nav-item active">
-                        <a className="nav-link" href="#">Integrantes <span className="sr-only">(current)</span></a>
+                        <a className="nav-link" href="/Integrantes">Integrantes <span className="sr-only">(current)</span></a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">Proyectos</a>
+                        <a className="nav-link" href="/Proyectos">Proyectos</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">Contacto</a>
+                        <a className="nav-link" href="/Contacto">Contacto</a>
                     </li>
                 </ul>
             </div>

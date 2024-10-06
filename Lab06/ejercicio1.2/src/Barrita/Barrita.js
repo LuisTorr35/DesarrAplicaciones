@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const BarritaNav = () => {
     useEffect(() => {
@@ -24,13 +25,16 @@ const BarritaNav = () => {
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
                     <li className="nav-item active">
-                        <a className="nav-link" href="#">Integrantes <span className="sr-only">(current)</span></a>
+                        <Link className="nav-link" to="/">Integrantes <span className="sr-only">(current)</span></Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">Proyectos</a>
+                        <Link className="nav-link" to="/proyectos">Proyectos</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="#">Contacto</a>
+                        <Link className="nav-link" to="/contacto">Contacto</Link>
+                    </li>
+                    <li className="nav-item"> {/* Nueva pestaña para agregar integrantes */}
+                        <Link className="nav-link" to="/agregar">Agregar Integrantes</Link>
                     </li>
                 </ul>
             </div>
